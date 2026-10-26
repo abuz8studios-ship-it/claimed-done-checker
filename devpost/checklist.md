@@ -9,7 +9,7 @@ Build mode: fast (submit directive — checkpoints merge into the demo run)
 
 ## Slices
 
-- [ ] **1. Core loop runs end to end: paste, CHECK IT, verdict card**
+- [x] **1. Core loop runs end to end: paste, CHECK IT, verdict card**
   Becomes usable: A page you can open where pasting a claim and evidence and pressing CHECK IT shows the giant verdict card with checklist and meter.
   Why now: This is the kernel — the pinned check logic driving a real verdict. Everything else (stamp, styling, seam) lands on this; building it first means bad news arrives early.
   PRD ref: `prd.md > The Core Journey` (steps 1-4), `prd.md > States and Boundaries`
@@ -19,7 +19,7 @@ Build mode: fast (submit directive — checkpoints merge into the demo run)
   Learner check: Open `index.html` in your browser, paste/run both calibration examples, and report the two verdicts with their meter states.
   Commit: `Core check loop with verdict card`
 
-- [ ] **2. Finished page: stamp, examples, sample cards, styling, seam, README**
+- [x] **2. Finished page: stamp, examples, sample cards, styling, seam, README**
   Becomes usable: The shippable proof — ledger stamp, one-click examples, sample cards, full styling, adapter seam, README.
   Why now: Completes `prd.md > What We're Building` on the proven loop; nothing here can break the kernel, only dress it.
   PRD ref: `prd.md > Features and Behavior`, `prd.md > Look and Feel`, `prd.md > What We're Building`
@@ -42,14 +42,15 @@ Build mode: fast (submit directive — checkpoints merge into the demo run)
 
 - [ ] Learning activity complete — guided route, focused alternative, prior practice connected, or brief recap
 - [ ] Optional edit and transfer reflection addressed — offered/declined/already covered/not applicable as appropriate
-- [ ] `devpost/app-map.html` generated from finished code, checked, and shown, including a project-grounded practice to reuse
+- [x] `devpost/app-map.html` generated from finished code, checked, and shown, including a project-grounded practice to reuse
 
-Activity and evidence: [not started]
-Route and stops: [not started]
-Edit outcome: [not started]
-Reflection: [not started]
-Activity mode: [not started]
+Activity and evidence: app map generated from commit aa7a735; live tour pending (submit directive) — route recorded below as reference
+Route and stops: reference route — js/app.js (checkBtn handler) → js/engine.js (function check) → index.html (verdictCard); not toured live
+Edit outcome: not applicable (no tour edit offered under submit directive)
+Reflection: offered in handoff; awaiting reply
+Activity mode: reference route + map; live walkthrough deferred to learner
 
 ## Revisions
 
 - Commitment splitter matches sentence punctuation only when followed by whitespace or end — the build found a bare split breaks inside filenames like `dashboard.md`.
+- Slices 1–2 committed together in `aa7a735` — the 3-minute submit directive merged the per-slice commits; both slices were built and mechanically verified in order first.
