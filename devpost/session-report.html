@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Session Report — CLAIMED ≠ DONE Checker</title>
+<style>
+  :root { --bg:#FAF8F5; --ink:#23201a; --muted:#6f6a5e; --green:#15803d; --amber:#b45309; --red:#b91c1c; --card:#fff; --line:#e5ded2; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 32px 20px 64px; line-height: 1.6; }
+  main { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; } h1 .neq { color: var(--red); }
+  .sub { color: var(--muted); margin: 0 0 6px; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 20px; }
+  .badge { border-radius: 999px; padding: 3px 12px; font-size: .8rem; font-weight: 700; color: #fff; }
+  .g { background: var(--green); } .a { background: var(--amber); } .n { background: var(--muted); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin: 0 0 16px; }
+  section h2 { font-size: 1.02rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
+  p { margin: 0 0 8px; } p:last-child { margin-bottom: 0; }
+  a { color: #1d4ed8; }
+  code { background: #f1ece1; padding: 0 5px; border-radius: 5px; font-size: .85em; word-break: break-all; }
+  pre { background: #23201a; color: #f4efe5; border-radius: 10px; padding: 14px 16px; overflow-x: auto; font-size: .82rem; }
+  pre code { background: none; padding: 0; color: inherit; }
+  ol, ul { margin: 8px 0 4px; padding-left: 20px; } li { margin: 5px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: 6px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); text-transform: uppercase; font-size: .75rem; letter-spacing: .05em; }
+  .links a { display: block; margin: 6px 0; word-break: break-all; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: 0 0 12px; }
+  summary { cursor: pointer; font-weight: 700; }
+  footer { color: var(--muted); font-size: .85rem; margin-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>CLAIMED <span class="neq">≠</span> DONE Checker — Session Report</h1>
+  <p class="sub">Build With AI: Basics · One session, plan-first start to pushed product · Mon Oct 26, 2026 (afternoon → evening EDT).</p>
+  <div class="badges">
+    <span class="badge g">APP LIVE</span>
+    <span class="badge g">REPO PUBLIC</span>
+    <span class="badge g">CALIBRATION PASSING</span>
+    <span class="badge a">VIDEO + DEVPOST FORM PENDING</span>
+  </div>
+
+  <section>
+    <h2>What was made</h2>
+    <p>A one-page web app: paste what an AI agent claimed and the evidence, press CHECK IT, get one honest verdict — <b>VERIFIED</b> (green), <b>CLAIMED-ONLY</b> (amber, the default), or <b>DISPUTED</b> (red) — with the evidence checklist, a STATED → SOLD meter, and a ledger stamp (time + SHA-256). Deterministic, offline, zero dependencies, no accounts, no storage. Two one-click examples; three static sample report cards.</p>
+  </section>
+
+  <section>
+    <h2>How it went (chat arc)</h2>
+    <ol>
+      <li><b>Start:</b> fresh project folder created (<code>build-with-ai-basics/</code>); learner profile captured (self-taught ~1 yr, agent builder, first plan-first project).</li>
+      <li><b>Scope:</b> Showfront vision heard, Basics entry fixed as the Checker; the deterministic check logic was pinned <i>in scope itself</i> with a calibration lock (Ex1 → VERIFIED/TESTED, Ex2 → DISPUTED/STATED). Approved + HTML companion.</li>
+      <li><b>PRD:</b> one dashboard page with the Checker inside; ledger resolved to a live display-only stamp (scope's "saves nothing" kept); agent chat/purposes deferred. Approved + HTML companion.</li>
+      <li><b>Spec:</b> learner overrode single-file → modular static files + pure engine core + adapter seam (MCP/Google/Microsoft plug in later, zero connectors today). Approved + HTML companion.</li>
+      <li><b>Build:</b> 2 slices, both mechanically verified in Node (calibration PASS), committed, pushed to a new public repo. App map generated.</li>
+      <li><b>Ship prep:</b> GitHub Pages enabled and verified; handoff record saved. Video + Devpost form remain human-only steps.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Verified results (not claims)</h2>
+    <table>
+      <tr><th>Check</th><th>Result</th></tr>
+      <tr><td>Example 1 (88-chat audit)</td><td>VERIFIED, meter TESTED, both commitments supported</td></tr>
+      <tr><td>Example 2 ("shipped" vs open loop)</td><td>DISPUTED, meter STATED</td></tr>
+      <tr><td>Empty input</td><td>CLAIMED-ONLY (honest default)</td></tr>
+      <tr><td>JS syntax (5 files)</td><td><code>node --check</code> clean</td></tr>
+      <tr><td>Live page</td><td>HTTP 200, app + 4 doc pages confirmed serving</td></tr>
+      <tr><td>Public repo</td><td>Confirmed via unauthenticated check; private profile excluded (verified absent)</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Decisions worth keeping</h2>
+    <ul>
+      <li>One verdict, never a score — no percentages, no "100% done."</li>
+      <li>Same boxes, same verdict, every time — learning/evolution explicitly barred from the proof.</li>
+      <li>Verify from specs, not memory — the engine reads only the two boxes, never outside knowledge.</li>
+      <li>Kernel first: the check logic was specified before any code, and the build answered to fixed examples ("fix the logic, not the examples").</li>
+    </ul>
+  </section>
+
+  <section class="links">
+    <h2>Open these</h2>
+    <a href="https://abuz8studios-ship-it.github.io/claimed-done-checker/">★ The Checker app (live)</a>
+    <a href="https://github.com/abuz8studios-ship-it/claimed-done-checker">Public GitHub repo</a>
+    <a href="https://abuz8studios-ship-it.github.io/claimed-done-checker/devpost/app-map.html">App map (code guide)</a>
+    <a href="https://abuz8studios-ship-it.github.io/claimed-done-checker/devpost/scope.html">Scope companion</a>
+    <a href="https://abuz8studios-ship-it.github.io/claimed-done-checker/devpost/prd.html">PRD companion</a>
+    <a href="https://abuz8studios-ship-it.github.io/claimed-done-checker/devpost/spec.html">Spec companion</a>
+  </section>
+
+  <details>
+    <summary>For the builder: resume notes</summary>
+    <ul>
+      <li>Local: <code>C:\Users\wirec\build-with-ai-basics\</code>, branch <code>main</code>, synced at <code>5a22077</code>.</li>
+      <li>Re-verify: <code>node --check js/*.js js/adapters/*.js</code> + calibration via <code>js/engine.js</code> + <code>js/examples.js</code>.</li>
+      <li>Remaining: demo video (&lt;1 min), Devpost form + exit survey in the learner's own words, submit.</li>
+      <li>Full continuation record: <code>devpost/HANDOFF.md</code> in the repo.</li>
+    </ul>
+  </details>
+
+  <footer>Report generated from the session's verified artifacts — commits, checks, and live pages. Works offline; share by link or file.</footer>
+</main>
+</body>
+</html>
